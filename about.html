@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO: Page title and meta description -->
+  <title>About Me &amp; Skills | 2nd-Year CCE Student Portfolio</title>
+  <meta name="description" content="Academic background, CCE coursework, technical proficiencies, and learning objectives of a second-year Computer and Communication Engineering student.">
+  <meta name="author" content="Computer &amp; Communication Engineering Student">
+
+  <!-- Link to central stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- 
+    ACCESSIBILITY FEATURE: Skip Link
+    Allows keyboard and screen-reader users to skip repeated navigation links 
+    and jump straight to the main content of the About page.
+  -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 
+    SEMANTIC ELEMENT: <header>
+    Site header with brand link and primary navigation landmark.
+  -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-link" aria-label="Student Portfolio Home">
+        Student Portfolio
+        <span class="brand-badge">CCE Student</span>
+      </a>
+
+      <!-- Primary navigation: 'About' is marked as active using aria-current="page" -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 
+    SEMANTIC ELEMENT: <main>
+    Unique content of the About page.
+  -->
+  <main id="main-content">
+    <div class="container">
+
+      <!-- 
+        SECTION 1: About Me
+        Primary topic introduced with a single <h1>
+      -->
+      <section class="about-intro" aria-labelledby="about-heading">
+        <h1 id="about-heading">About Me</h1>
+        <p class="hero-subtitle">
+          I am a second-year undergraduate student pursuing a degree in 
+          <strong>Computer and Communication Engineering (CCE)</strong>.
+        </p>
+        <p>
+          My engineering education bridges hardware communication channels and software computing systems. 
+          I am passionate about exploring how network protocols transmit data, how microcontrollers collect 
+          and stream environmental sensor telemetry, and how modern web applications can be engineered to be 
+          inclusive, responsive, and universally accessible.
+        </p>
+        <p>
+          My hands-on academic work focuses on practical problem solving—demonstrated by building an 
+          <strong>IoT-Based Weather Monitoring System</strong> for real-time telemetry acquisition and developing 
+          <strong>DHARM AI Decision</strong> to deliver a structured, accessible web-based decision interface.
+        </p>
+      </section>
+
+      <!-- 
+        SECTION 2: Academic Background & Coursework
+        Structured using semantic <section>, <article>, and an unordered list (<ul>)
+      -->
+      <section class="education-section" aria-labelledby="academic-heading">
+        <h2 id="academic-heading">Academic Background &amp; Coursework</h2>
+        
+        <div class="edu-list">
+          <article class="edu-card">
+            <h3>Computer &amp; Communication Engineering (CCE)</h3>
+            <p class="edu-institution">Undergraduate Engineering Program &bull; Currently in Second Year</p>
+            <p>
+              My coursework balances mathematical rigor, electronic communication systems, and foundational 
+              computer science principles:
+            </p>
+            <ul>
+              <li><strong>Computer Networks &amp; Data Communication:</strong> OSI &amp; TCP/IP protocol models, packet switching, transmission media, and routing fundamentals</li>
+              <li><strong>Data Structures &amp; Algorithms in C/C++:</strong> Linear and non-linear structures (arrays, linked lists, stacks, queues, trees), search and sort algorithms, and computational complexity</li>
+              <li><strong>Digital Electronics &amp; Logic Design:</strong> Boolean algebra, combinational logic circuits, sequential flip-flops, registers, and timing analysis</li>
+              <li><strong>Signals and Systems:</strong> Continuous and discrete-time signal representations, Fourier analysis, sampling theorem, and filtering concepts</li>
+              <li><strong>Microcontrollers &amp; IoT Fundamentals:</strong> Embedded C programming, GPIO configuration, ADC conversion, sensor bus interfaces, and IoT hardware prototyping</li>
+              <li><strong>Web Development Fundamentals:</strong> HTML5 semantic markup standards, CSS3 layout engines (Flexbox &amp; Grid), responsive web design, and digital accessibility (WCAG 2.1 AA)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 
+        SECTION 3: Technical Proficiencies
+        Grouped under an <h2> heading with Subsections 4, 5, and 6 nested as <h3> articles
+      -->
+      <section class="skills-section" aria-labelledby="proficiencies-heading">
+        <h2 id="proficiencies-heading">Technical Proficiencies</h2>
+        <p>
+          Core proficiencies developed through lab coursework, personal experimentation, and active engineering projects:
+        </p>
+
+        <div class="cards-grid">
+
+          <!-- 
+            SECTION 4: IoT & Embedded Systems (h3)
+          -->
+          <article class="card" aria-labelledby="iot-skills-heading">
+            <h3 id="iot-skills-heading">IoT &amp; Embedded Systems</h3>
+            <p>Applied in building the <strong>IoT-Based Weather Monitoring System</strong>:</p>
+            <ul>
+              <li><strong>Sensors &amp; Telemetry:</strong> Interfacing ambient temperature, relative humidity, and barometric pressure sensor modules</li>
+              <li><strong>Microcontroller Programming:</strong> GPIO control, analog-to-digital conversion (ADC), sensor bus communication (I2C/SPI), and serial debugging</li>
+              <li><strong>IoT Connectivity:</strong> Data packet streaming over Wi-Fi, environmental telemetry logging, and local status indication</li>
+            </ul>
+          </article>
+
+          <!-- 
+            SECTION 5: Web Development (h3)
+          -->
+          <article class="card" aria-labelledby="web-skills-heading">
+            <h3 id="web-skills-heading">Web Development</h3>
+            <p>Applied in building the <strong>DHARM AI Decision</strong> web interface:</p>
+            <ul>
+              <li><strong>Semantic HTML5:</strong> Structured content using native landmarks (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+              <li><strong>Web Accessibility (a11y):</strong> Adherence to WCAG 2.1 AA guidelines, ARIA landmark roles, and complete keyboard navigation support</li>
+              <li><strong>Responsive CSS3:</strong> Mobile-first layouts, CSS custom properties (variables), Flexbox, and CSS Grid systems</li>
+              <li><strong>Accessible Forms:</strong> Explicit label association (<code>for</code> / <code>id</code>), fieldset grouping with legends, and live-region status feedback</li>
+            </ul>
+          </article>
+
+          <!-- 
+            SECTION 6: Core Engineering (h3)
+          -->
+          <article class="card" aria-labelledby="engineering-skills-heading">
+            <h3 id="engineering-skills-heading">Core Engineering</h3>
+            <p>Fundamental engineering and computational competencies:</p>
+            <ul>
+              <li><strong>Network Principles:</strong> Layered network architecture, packet flow analysis, IP addressing, subnetting, and client-server communication</li>
+              <li><strong>Programming:</strong> C and C++ for algorithmic problem solving and systems programming; Python for scripting and automation</li>
+              <li><strong>Developer Tools:</strong> Git &amp; GitHub for version control, VS Code development environment, and browser developer tools for debugging</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 
+        SECTION 7: Academic & Learning Objectives (h2)
+        Housed inside a semantic <aside> representing forward-looking learning milestones
+        Formatted using an ordered list (<ol>) for all three objectives
+      -->
+      <aside aria-labelledby="objectives-heading">
+        <h2 id="objectives-heading" style="margin-top: 0; font-size: 1.35rem;">Academic &amp; Learning Objectives</h2>
+        <p>As I progress through my second year of Computer &amp; Communication Engineering, my active goals are:</p>
+        <ol>
+          <li>Deepen proficiency in IoT hardware-to-cloud communication architectures and real-time telemetry processing pipelines.</li>
+          <li>Continue building standards-compliant, WCAG-accessible web interfaces using clean semantic HTML5 and responsive CSS.</li>
+          <li>Advance knowledge of networking protocols, embedded microcontroller design, and reliable software-hardware integration.</li>
+        </ol>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- 
+    SEMANTIC ELEMENT: <footer>
+    Contains site metadata, secondary navigation, and return-to-top anchor.
+  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">CCE Student Portfolio</div>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Student Portfolio. Built for HTML5 Semantic Structure &amp; Accessibility Internship.</p>
+        <a href="#top" class="back-to-top" aria-label="Scroll back to top of the page">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

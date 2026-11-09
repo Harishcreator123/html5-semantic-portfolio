@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding ensures correct rendering of standard and special characters -->
+  <meta charset="UTF-8">
+  <!-- Viewport meta tag makes the website responsive on mobile and desktop devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO-friendly title and meta description -->
+  <title>Student Portfolio | 2nd-Year Computer &amp; Communication Engineering</title>
+  <meta name="description" content="Portfolio of a 2nd-year Computer and Communication Engineering student featuring an IoT-Based Weather Monitoring System, DHARM AI Decision web project, and accessible design.">
+  <meta name="author" content="Computer &amp; Communication Engineering Student">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- 
+    ACCESSIBILITY FEATURE: Skip Link
+    Allows keyboard and screen-reader users to skip repeated navigation links 
+    and jump straight to the unique content of this page.
+  -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 
+    SEMANTIC ELEMENT: <header>
+    Represents introductory content and navigational aids for the entire website.
+  -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Site Brand / Identity -->
+      <a href="index.html" class="brand-link" aria-label="Student Portfolio Home">
+        Student Portfolio
+        <span class="brand-badge">CCE Student</span>
+      </a>
+
+      <!-- 
+        SEMANTIC ELEMENT: <nav>
+        Defines a block of primary navigation links.
+        aria-label="Main Navigation" provides screen reader users with a clear landmark description.
+      -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <!-- aria-current="page" informs assistive technologies which link represents the active page -->
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 
+    SEMANTIC ELEMENT: <main>
+    Contains the central, unique content of this document. Only one visible <main> 
+    should exist per page. The id="main-content" is targeted by the skip link.
+  -->
+  <main id="main-content">
+    <div class="container">
+
+      <!-- 
+        SEMANTIC ELEMENT: <section>
+        Groups thematically related content together. 
+        aria-labelledby connects this section to its primary heading for screen readers.
+      -->
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <!-- 
+            HEADING HIERARCHY: <h1>
+            Each page should have exactly one <h1> that clearly states the page's main topic.
+          -->
+          <h1 id="hero-title">Computer &amp; Communication Engineering Student</h1>
+          <p class="hero-subtitle">
+            Welcome to my academic portfolio. I am a 2nd-year <strong>Computer and Communication Engineering</strong> 
+            student building practical projects at the intersection of IoT hardware systems and responsive, 
+            accessible web development.
+          </p>
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <!-- 
+            ACCESSIBILITY: Meaningful alt text
+            Describes the image purpose so screen reader users receive equal context.
+          -->
+          <img 
+            src="images/profile-placeholder.svg" 
+            alt="Vector illustration representing a Computer and Communication Engineering student with a laptop" 
+            width="380" 
+            height="380"
+          >
+        </div>
+      </section>
+
+      <!-- Core Academic Focus Section -->
+      <section class="focus-section" aria-labelledby="focus-title">
+        <h2 id="focus-title">Academic &amp; Technical Focus</h2>
+        <p>Connecting communication principles, IoT sensor architectures, and modern web accessibility.</p>
+        
+        <div class="cards-grid">
+          <!-- 
+            SEMANTIC ELEMENT: <article>
+            Represents an independent, self-contained piece of content.
+          -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">&#9881;</div>
+            <h3>IoT &amp; Embedded Systems</h3>
+            <p>
+              Designing sensor-driven hardware solutions such as my 
+              <strong>IoT-Based Weather Monitoring System</strong>, collecting environmental parameters in real time.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Web Development</h3>
+            <p>
+              Developing responsive web applications like <strong>DHARM AI Decision</strong>, 
+              focusing on structured user workflows and clean frontend design.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">&#9855;</div>
+            <h3>HTML5 &amp; Accessibility (a11y)</h3>
+            <p>
+              Structuring web pages with native semantic HTML5 tags and WCAG standards for 
+              inclusive keyboard and screen-reader accessibility.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured Projects Teaser Section -->
+      <section class="preview-section" aria-labelledby="preview-title">
+        <h2 id="preview-title">Featured Projects Spotlight</h2>
+        <p>A look at my primary engineering and web projects:</p>
+
+        <div class="cards-grid" style="margin-top: 1rem;">
+          <article class="card" style="border-left: 5px solid var(--color-primary);">
+            <h3>IoT-Based Weather Monitoring System</h3>
+            <p>
+              An IoT engineering project combining ambient environmental sensors with microcontrollers 
+              to stream live weather data.
+            </p>
+            <a href="projects.html" class="btn btn-sm btn-primary">Project Details &rarr;</a>
+          </article>
+
+          <article class="card" style="border-left: 5px solid var(--color-secondary);">
+            <h3>DHARM AI Decision</h3>
+            <p>
+              A web development application providing an interactive interface for criteria evaluation 
+              and intelligent decision support.
+            </p>
+            <a href="projects.html" class="btn btn-sm btn-primary">Project Details &rarr;</a>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 
+    SEMANTIC ELEMENT: <footer>
+    Represents metadata, copyright details, and secondary links for the enclosing page or document.
+  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">CCE Student Portfolio</div>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Student Portfolio. Built for HTML5 Semantic Structure &amp; Accessibility Internship.</p>
+        <a href="#top" class="back-to-top" aria-label="Scroll back to top of the page">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

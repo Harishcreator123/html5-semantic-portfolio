@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Diagram of IoT-Based Weather Monitoring System showing sensor telemetry and dashboard">
+  <defs>
+    <linearGradient id="iot-bg" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" stop-color="#082f49" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="iot-card-grad" x1="0%" y1="0%" x2="1" y2="0%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="340" fill="url(#iot-bg)" />
+
+  <!-- Outer Dashboard Frame -->
+  <rect x="30" y="25" width="540" height="290" rx="12" fill="#0c1e33" stroke="#38bdf8" stroke-width="1.5" />
+  
+  <!-- Top Bar -->
+  <rect x="30" y="25" width="540" height="38" rx="12" fill="#075985" />
+  <circle cx="55" cy="44" r="5" fill="#38bdf8" />
+  <text x="75" y="49" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    IoT-Based Weather Monitoring Station &#x2022; Real-Time Telemetry
+  </text>
+  <rect x="460" y="36" width="90" height="18" rx="9" fill="#0284c7" />
+  <text x="505" y="49" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">&#x25CF; CONNECTED</text>
+
+  <!-- Left Column: Sensor Node &amp; Microcontroller Block -->
+  <rect x="55" y="80" width="165" height="215" rx="8" fill="#164e63" stroke="#0ea5e9" stroke-width="1" />
+  <text x="137" y="105" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc" text-anchor="middle">Hardware Node</text>
+  
+  <!-- Microcontroller Graphic -->
+  <rect x="75" y="120" width="125" height="60" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="137" y="145" font-family="monospace" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">MCU / Wi-Fi</text>
+  <text x="137" y="165" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">GPIO &#x2022; I2C &#x2022; ADC</text>
+
+  <!-- Sensor Indicators -->
+  <rect x="75" y="195" width="125" height="26" rx="4" fill="#083344" />
+  <text x="137" y="212" font-family="sans-serif" font-size="10" fill="#e0f2fe" text-anchor="middle">DHT Temp &amp; Humidity</text>
+
+  <rect x="75" y="230" width="125" height="26" rx="4" fill="#083344" />
+  <text x="137" y="247" font-family="sans-serif" font-size="10" fill="#e0f2fe" text-anchor="middle">Atmospheric Pressure</text>
+
+  <text x="137" y="280" font-family="monospace" font-size="9" fill="#38bdf8" text-anchor="middle">Wi-Fi Stream &#x2192;</text>
+
+  <!-- Right Section: Live Weather Metrics Dashboard -->
+  <!-- Metric Card 1: Temperature -->
+  <rect x="240" y="80" width="150" height="95" rx="8" fill="#0f2942" stroke="#0284c7" stroke-width="1" />
+  <text x="255" y="105" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Temperature</text>
+  <text x="255" y="145" font-family="sans-serif" font-size="28" font-weight="bold" fill="#f8fafc">24.6 &#x00B0;C</text>
+  <text x="255" y="165" font-family="sans-serif" font-size="9" fill="#34d399">&#x2191; Normal Ambient Range</text>
+
+  <!-- Metric Card 2: Humidity -->
+  <rect x="405" y="80" width="150" height="95" rx="8" fill="#0f2942" stroke="#0284c7" stroke-width="1" />
+  <text x="420" y="105" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Relative Humidity</text>
+  <text x="420" y="145" font-family="sans-serif" font-size="28" font-weight="bold" fill="#38bdf8">58 %</text>
+  <text x="420" y="165" font-family="sans-serif" font-size="9" fill="#7dd3fc">Sensor Status: Stable</text>
+
+  <!-- Metric Card 3: Atmospheric Pressure &amp; Telemetry Status -->
+  <rect x="240" y="190" width="315" height="105" rx="8" fill="#0f2942" stroke="#0284c7" stroke-width="1" />
+  <text x="255" y="215" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Barometric Pressure &amp; Data Stream</text>
+  <text x="255" y="248" font-family="sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">1013.25 hPa</text>
+  
+  <!-- Waveform / Telemetry Graph simulation line -->
+  <path d="M 255 275 L 300 270 L 330 278 L 370 265 L 410 272 L 450 262 L 490 270 L 530 265" fill="none" stroke="#38bdf8" stroke-width="2" />
+  <circle cx="530" cy="265" r="3" fill="#38bdf8" />
+</svg>

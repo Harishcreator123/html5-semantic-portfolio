@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO: Title and description for the Contact page -->
+  <title>Contact Me | CCE Student Portfolio</title>
+  <meta name="description" content="Get in touch with a 2nd-year CCE student using a keyboard-accessible, screen-reader friendly contact form with accessible labels and ARIA support.">
+  <meta name="author" content="Computer &amp; Communication Engineering Student">
+
+  <!-- Link to centralized stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- Keyboard navigation skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-link" aria-label="Student Portfolio Home">
+        Student Portfolio
+        <span class="brand-badge">CCE Student</span>
+      </a>
+
+      <!-- Main Navigation with 'Contact' marked as active -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Unique page content -->
+  <main id="main-content">
+    <div class="container">
+
+      <!-- Section Heading -->
+      <section class="contact-header" aria-labelledby="contact-heading">
+        <h1 id="contact-heading">Contact Me</h1>
+        <p class="hero-subtitle">
+          Have a question about my engineering coursework, internship projects, or want to discuss 
+          web accessibility? Use the form below or reach out via my placeholder academic contacts.
+        </p>
+      </section>
+
+      <!-- 
+        LAYOUT GRID: Contact Information + Accessible Form
+      -->
+      <div class="contact-layout">
+
+        <!-- 
+          SEMANTIC ELEMENT: <aside>
+          Houses supplementary contact details alongside the main form.
+        -->
+        <aside class="contact-info-panel" aria-labelledby="info-heading">
+          <h2 id="info-heading">Contact Information</h2>
+          <p>Please note that all contact details below are placeholders for demonstration purposes:</p>
+
+          <ul class="contact-info-list">
+            <li>
+              <span class="contact-info-label">Email Address (Placeholder)</span>
+              <span class="contact-info-val">cce.student@example.edu</span>
+            </li>
+            <li>
+              <span class="contact-info-label">Telephone (Placeholder)</span>
+              <span class="contact-info-val">+1 (555) 019-2834</span>
+            </li>
+            <li>
+              <span class="contact-info-label">Campus Office (Placeholder)</span>
+              <span class="contact-info-val">Dept. of Computer &amp; Communication Engineering</span>
+            </li>
+            <li>
+              <span class="contact-info-label">Office Hours</span>
+              <span class="contact-info-val">Monday &ndash; Thursday, 2:00 PM &ndash; 4:00 PM</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 1.5rem; padding: 1rem; background-color: var(--color-primary-light); border-radius: var(--radius-sm); border: 1px solid #bfdbfe;">
+            <strong>Accessibility Note:</strong>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">
+              This form supports 100% keyboard navigation. Press <kbd>Tab</kbd> to move forward through controls, 
+              <kbd>Shift+Tab</kbd> to move backwards, and <kbd>Space</kbd> or <kbd>Enter</kbd> to toggle selections.
+            </p>
+          </div>
+        </aside>
+
+        <!-- 
+          SEMANTIC ELEMENT: <section> for the Contact Form
+        -->
+        <section class="form-wrapper" aria-labelledby="form-title">
+          <h2 id="form-title" class="sr-only">Send a Message Form</h2>
+
+          <!-- 
+            ACCESSIBLE FORM BEST PRACTICES:
+            1. Every input has a corresponding <label for="id"> matching the input id.
+            2. Required fields use both 'required' and 'aria-required="true"'.
+            3. Helper instructions use 'aria-describedby' referencing helper text elements.
+            4. Related choices are grouped inside a <fieldset> with a descriptive <legend>.
+            5. An aria-live="polite" region announces status messages to screen readers.
+          -->
+          <form id="portfolio-contact-form" class="accessible-form" action="#" method="post">
+            
+            <!-- Full Name Field -->
+            <div class="form-group">
+              <label for="full-name">
+                Full Name <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="full-name" 
+                name="full-name" 
+                required 
+                aria-required="true" 
+                autocomplete="name"
+                placeholder="e.g. Jane Doe"
+              >
+            </div>
+
+            <!-- Email Address Field -->
+            <div class="form-group">
+              <label for="email-address">
+                Email Address <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email-address" 
+                name="email-address" 
+                required 
+                aria-required="true" 
+                autocomplete="email"
+                aria-describedby="email-help"
+                placeholder="e.g. jane.doe@example.com"
+              >
+              <!-- Descriptive hint for screen reader and visual users -->
+              <small id="email-help" class="form-hint">
+                Your email will only be used to respond to this inquiry.
+              </small>
+            </div>
+
+            <!-- Subject Dropdown Field -->
+            <div class="form-group">
+              <label for="subject-select">
+                Inquiry Subject <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <select id="subject-select" name="subject-select" required aria-required="true">
+                <option value="" disabled selected>-- Please select a subject --</option>
+                <option value="internship">Internship Opportunity</option>
+                <option value="collaboration">Project &amp; Research Collaboration</option>
+                <option value="accessibility">Feedback on Web Accessibility</option>
+                <option value="general">General Student Inquiry</option>
+              </select>
+            </div>
+
+            <!-- 
+              SEMANTIC FORM ELEMENT: <fieldset> & <legend>
+              Used to group related form controls together semantically.
+              Critical for radio buttons and checkboxes so assistive technologies 
+              announce the group context (the legend) along with each individual choice.
+            -->
+            <fieldset>
+              <legend>Preferred Contact Method <span class="required-indicator" aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="pref-email" name="contact-pref" value="email" checked required>
+                  <label for="pref-email">Email</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="pref-phone" name="contact-pref" value="phone">
+                  <label for="pref-phone">Phone Call</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="pref-video" name="contact-pref" value="video">
+                  <label for="pref-video">Virtual Meeting (Video Call)</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Message Textarea Field -->
+            <div class="form-group">
+              <label for="user-message">
+                Message <span class="required-indicator" aria-hidden="true">*</span>
+              </label>
+              <textarea 
+                id="user-message" 
+                name="user-message" 
+                rows="5" 
+                required 
+                aria-required="true" 
+                aria-describedby="message-help"
+                placeholder="Type your message here..."
+              ></textarea>
+              <small id="message-help" class="form-hint">
+                Minimum 10 characters. Please provide any relevant details or questions.
+              </small>
+            </div>
+
+            <!-- Confirmation Checkbox -->
+            <div class="form-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="consent-check" name="consent-check" required aria-required="true">
+                <label for="consent-check">
+                  I understand this is a student demonstration form with placeholder data.
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+
+            <!-- 
+              ACCESSIBILITY FEATURE: Live Region
+              role="status" and aria-live="polite" inform assistive technologies when this 
+              element receives content dynamically, announcing confirmation without interrupting the user.
+            -->
+            <div 
+              id="form-status" 
+              role="status" 
+              aria-live="polite" 
+              class="form-status"
+            ></div>
+
+          </form>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">CCE Student Portfolio</div>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Student Portfolio. Built for HTML5 Semantic Structure &amp; Accessibility Internship.</p>
+        <a href="#top" class="back-to-top" aria-label="Scroll back to top of the page">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    Accessible Form Submission Script (Beginner-friendly vanilla JavaScript)
+    Intercepts the submit event to demonstrate how an accessible status message works 
+    without needing a backend server.
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('portfolio-contact-form');
+      const statusBox = document.getElementById('form-status');
+
+      if (form && statusBox) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent standard page refresh for demo
+
+          const nameInput = document.getElementById('full-name');
+          const senderName = nameInput ? nameInput.value.trim() : 'Friend';
+
+          // Update status live region
+          statusBox.textContent = `Thank you, ${senderName}! Your message has been received successfully. (This is a local demonstration).`;
+          statusBox.className = 'form-status is-visible';
+          
+          // Reset form fields
+          form.reset();
+
+          // Move focus to status message so screen readers and keyboard users immediately register the confirmation
+          statusBox.setAttribute('tabindex', '-1');
+          statusBox.focus();
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
